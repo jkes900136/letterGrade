@@ -1,5 +1,5 @@
 package letterGrade;
-
+import java.util.Scanner;
 public class LetterGrade {
 	public static char letterGrade(int score) {
 		char grade;
@@ -17,11 +17,14 @@ public class LetterGrade {
 			grade ='F';
 		return grade;
 	}
-//	public static void main(String[] args) {
-//		int score=87;
-//		char result;
-//		result=letterGrade(score);
-//		System.out.println("The letter grade is:"+result);
-//	}
-
+	public static void main(String[] args) {
+		int score=0;
+		char result;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Please enter a number score:");
+		score=scanner.nextInt();
+		result=letterGrade(score);
+		System.out.println("The letter grade is:"+result);
+		scanner.close(); 
+	}
 }
